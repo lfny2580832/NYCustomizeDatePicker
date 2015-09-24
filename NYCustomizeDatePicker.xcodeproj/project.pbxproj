@@ -14,6 +14,8 @@
 		4AACCC7D1BB44F6D0086C9A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC7C1BB44F6D0086C9A7 /* Images.xcassets */; };
 		4AACCC801BB44F6D0086C9A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC7E1BB44F6D0086C9A7 /* LaunchScreen.xib */; };
 		4AACCC8C1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC8B1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m */; };
+		4AACCC991BB450180086C9A7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC971BB450180086C9A7 /* MainViewController.m */; };
+		4AACCC9A1BB450180086C9A7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC981BB450180086C9A7 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		4AACCC851BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCustomizeDatePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AACCC8A1BB44F6D0086C9A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AACCC8B1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCustomizeDatePickerTests.m; sourceTree = "<group>"; };
+		4AACCC961BB450180086C9A7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4AACCC971BB450180086C9A7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4AACCC981BB450180086C9A7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +86,10 @@
 		4AACCC6E1BB44F6D0086C9A7 /* NYCustomizeDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				4AACCC731BB44F6D0086C9A7 /* AppDelegate.h */,
-				4AACCC741BB44F6D0086C9A7 /* AppDelegate.m */,
 				4AACCC761BB44F6D0086C9A7 /* ViewController.h */,
 				4AACCC771BB44F6D0086C9A7 /* ViewController.m */,
 				4AACCC791BB44F6D0086C9A7 /* Main.storyboard */,
-				4AACCC7C1BB44F6D0086C9A7 /* Images.xcassets */,
-				4AACCC7E1BB44F6D0086C9A7 /* LaunchScreen.xib */,
+				4AACCC951BB44FFB0086C9A7 /* MainContainer */,
 				4AACCC6F1BB44F6D0086C9A7 /* Supporting Files */,
 			);
 			path = NYCustomizeDatePicker;
@@ -96,6 +98,10 @@
 		4AACCC6F1BB44F6D0086C9A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4AACCC731BB44F6D0086C9A7 /* AppDelegate.h */,
+				4AACCC741BB44F6D0086C9A7 /* AppDelegate.m */,
+				4AACCC7C1BB44F6D0086C9A7 /* Images.xcassets */,
+				4AACCC7E1BB44F6D0086C9A7 /* LaunchScreen.xib */,
 				4AACCC701BB44F6D0086C9A7 /* Info.plist */,
 				4AACCC711BB44F6D0086C9A7 /* main.m */,
 			);
@@ -117,6 +123,16 @@
 				4AACCC8A1BB44F6D0086C9A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AACCC951BB44FFB0086C9A7 /* MainContainer */ = {
+			isa = PBXGroup;
+			children = (
+				4AACCC961BB450180086C9A7 /* MainViewController.h */,
+				4AACCC971BB450180086C9A7 /* MainViewController.m */,
+				4AACCC981BB450180086C9A7 /* MainViewController.xib */,
+			);
+			path = MainContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +218,7 @@
 				4AACCC7B1BB44F6D0086C9A7 /* Main.storyboard in Resources */,
 				4AACCC801BB44F6D0086C9A7 /* LaunchScreen.xib in Resources */,
 				4AACCC7D1BB44F6D0086C9A7 /* Images.xcassets in Resources */,
+				4AACCC9A1BB450180086C9A7 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +239,7 @@
 				4AACCC781BB44F6D0086C9A7 /* ViewController.m in Sources */,
 				4AACCC751BB44F6D0086C9A7 /* AppDelegate.m in Sources */,
 				4AACCC721BB44F6D0086C9A7 /* main.m in Sources */,
+				4AACCC991BB450180086C9A7 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

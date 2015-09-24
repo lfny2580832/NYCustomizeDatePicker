@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="contentLabel" destination="STs-8w-yYl" id="dme-sm-uAr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STs-8w-yYl">
+                    <rect key="frame" x="22" y="40" width="277" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ujL-VI-InZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cil-rn-CQV">
+                    <rect key="frame" x="22" y="40" width="277" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Je6-pI-mwu"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showCustomeDatePicker:" destination="-1" eventType="touchUpInside" id="cGd-3P-fOg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="STs-8w-yYl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="4yy-GF-LiA"/>
+                <constraint firstAttribute="trailing" secondItem="cil-rn-CQV" secondAttribute="trailing" constant="21" id="C3L-Up-9pr"/>
+                <constraint firstItem="cil-rn-CQV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="bA6-1c-dkb"/>
+                <constraint firstItem="STs-8w-yYl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="fer-iN-IYb"/>
+                <constraint firstAttribute="trailing" secondItem="STs-8w-yYl" secondAttribute="trailing" constant="21" id="n0j-Yp-eJl"/>
+                <constraint firstItem="cil-rn-CQV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="x0f-AZ-JQB"/>
+            </constraints>
+            <point key="canvasLocation" x="340" y="405"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

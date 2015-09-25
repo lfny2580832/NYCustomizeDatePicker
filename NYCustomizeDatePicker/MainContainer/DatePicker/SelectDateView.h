@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UIView *view;
+@property(strong,nonatomic)NSDate *chosenDate;
 
 -(void)loadWithChooseDate:(NSDate *)date;
 

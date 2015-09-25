@@ -8,16 +8,8 @@
 
 #import "PickerSubView.h"
 
-@protocol DayPickerDelegate;
-
 @interface DayPickerView : PickerSubView<UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property (strong, nonatomic) id<DayPickerDelegate> dateDelegate;
 
 @end
 
-@protocol DayPickerDelegate <NSObject>
-
-- (void)dateValueChangedWithYear:(NSDate *)year Month:(NSDate *)month Day:(NSDate *)day;
-
-@end

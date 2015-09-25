@@ -74,7 +74,7 @@
                                                     fromDate:self.startDate];
     NSString *currentYear = [NSString stringWithFormat:@"%ld年", [components year] + row];
     [dateLabel setText:currentYear];
-    dateLabel.textAlignment = NSTextAlignmentCenter;
+    dateLabel.textAlignment = NSTextAlignmentLeft;
     return dateLabel;
 }
 
@@ -91,7 +91,7 @@
                                                              fromDate:self.startDate];
     NSInteger year = [indicatorComponents year] + row;
     NSString *chosenYearString = [NSString stringWithFormat:@"%ld",(long)year];
-    [self.yearDelegate yearValueChanged:chosenYearString];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"YearValueChanged" object:chosenYearString];
 }
 
 @end

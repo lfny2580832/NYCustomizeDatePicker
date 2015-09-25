@@ -70,7 +70,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     NSString *chosenMonthString = [NSString stringWithFormat:@"%ld",row+1];
-    [self.monthDelegate monthValueChanged:chosenMonthString];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"MonthValueChanged" object:chosenMonthString];
 }
 
 @end

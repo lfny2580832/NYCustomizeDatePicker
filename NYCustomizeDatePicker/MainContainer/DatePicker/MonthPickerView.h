@@ -8,16 +8,8 @@
 
 #import "PickerSubView.h"
 
-@protocol MonthPickerDelegate;
-
 @interface MonthPickerView : PickerSubView<UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property (strong, nonatomic) id<MonthPickerDelegate> monthDelegate;
 
 @end
 
-@protocol MonthPickerDelegate <NSObject>
-
-- (void)monthValueChanged:(NSString *)month;
-
-@end

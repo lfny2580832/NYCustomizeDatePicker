@@ -16,8 +16,6 @@
 #define ScreenWidth         [UIScreen mainScreen].bounds.size.width
 
 @interface SelectDateView ()
-
-@property(strong,nonatomic)NSDate *chosenDate;
 @end
 
 @implementation SelectDateView
@@ -67,9 +65,29 @@
     [self loadPickerSubViews];
 }
 
+#pragma mark Notification Methods
+-(void)finalYearDateWithNotification:(NSNotification *)notification{
+    self.chosenDate = notification.object;
+}
+
+-(void)finalMonthDateWithNotification:(NSNotification *)notification{
+    self.chosenDate = notification.object;
+}
+
+-(void)finalDayDateWithNotification:(NSNotification *)notification{
+    self.chosenDate = notification.object;
+}
+
 #pragma mark - UIView Methods
 -(void)awakeFromNib{
     [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(finalYearDateWithNotification:) name:@"FinalYearDate" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(finalMonthDateWithNotification:) name:@"FinalMonthDate" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(finalDayDateWithNotification:) name:@"FinalDayDate" object:nil];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 @end

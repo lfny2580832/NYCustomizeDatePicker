@@ -7,10 +7,8 @@
 //
 
 #import "DayPickerView.h"
-#import "YearPickerView.h"
-#import "MonthPickerView.h"
 
-@interface DayPickerView ()<YearPickerDelegate,MonthPickerDelegate>
+@interface DayPickerView ()
 @property(strong,nonatomic)NSCalendar *calendar;
 @property(strong,nonatomic)NSDate *chosenDate;
 @property NSInteger chosenYear;
@@ -44,26 +42,32 @@
     [self.finalComponents setDay:self.chosenDay];
 }
 
-#pragma mark Picker Delagete
-- (void)yearValueChanged:(NSString *)year{
-    self.chosenYear = [year intValue];
+#pragma mark Notification Methods
+- (void)yearValueChangedWithNotification:(NSNotification *)notification{
+    self.chosenYear = [notification.object intValue];
     [self.finalComponents setYear:self.chosenYear];
     NSDate *finalYearDate = [self.calendar dateFromComponents:self.finalComponents];
-    [self.dateDelegate dateValueChangedWithYear:finalYearDate Month:nil Day:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"FinalYearDate" object:finalYearDate];
     [self reloadAllComponents];
 }
 
-- (void)monthValueChanged:(NSString *)month{
-    self.chosenMonth = [month intValue];
+- (void)monthValueChangedWithNotification:(NSNotification *)notification{
+    self.chosenMonth = [notification.object intValue];
     [self.finalComponents setMonth:self.chosenMonth];
     NSDate *finalMonthDate = [self.calendar dateFromComponents:self.finalComponents];
-    [self.dateDelegate dateValueChangedWithYear:nil Month:finalMonthDate Day:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"FinalMonthDate" object:finalMonthDate];
     [self reloadAllComponents];
 }
 
 #pragma mark - UIView Methods
 -(void)awakeFromNib{
     [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yearValueChangedWithNotification:) name:@"YearValueChanged" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(monthValueChangedWithNotification:) name:@"MonthValueChanged" object:nil];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 #pragma mark - UIPickerView DataSource Methods
@@ -115,7 +119,7 @@
     self.chosenDay = row + 1;
     [self.finalComponents setDay:self.chosenDay];
     NSDate *finalDayDate = [self.calendar dateFromComponents:self.finalComponents];
-    [self.dateDelegate dateValueChangedWithYear:nil Month:nil Day:finalDayDate];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"FinalDayDate" object:finalDayDate];
 }
 
 @end

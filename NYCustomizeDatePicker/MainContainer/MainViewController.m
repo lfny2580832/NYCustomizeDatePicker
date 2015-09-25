@@ -8,12 +8,11 @@
 
 #import "MainViewController.h"
 #import "SelectDateView.h"
-#import "DayPickerView.h"
 
 #define ScreenWidth         [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight         [UIScreen mainScreen].bounds.size.height
 
-@interface MainViewController ()<DayPickerDelegate>
+@interface MainViewController ()
 @property(strong,nonatomic)SelectDateView *selectDateView;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property(strong,nonatomic)NSCalendar *calendar;
@@ -43,7 +42,6 @@
 
 #pragma mark - Private Methods
 -(void)loadSelectDateView{
-    [self loadDate];
     self.dvWidth = ScreenWidth;
     self.selectDateView = [[[NSBundle mainBundle]loadNibNamed:@"SelectDateView" owner:self options:nil]lastObject];
     [self.selectDateView loadWithChooseDate:self.chosenDate];
@@ -72,20 +70,10 @@
     self.dateLabel.text = chosenDateString;
 }
 
-#pragma mark DateDelegate Methods
-- (void)dateValueChangedWithYear:(NSDate *)year Month:(NSDate *)month Day:(NSDate *)day{
-    if (year != nil) {
-        self.chosenDate = year;
-    }else if(month != nil){
-        self.chosenDate = month;
-    }else if(day != nil){
-        self.chosenDate = day;
-    }
-}
-
 #pragma mark - UIView Methods
--(void)awakeFromNib{
-    [super awakeFromNib];
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self loadDate];
 }
 
 #pragma mark - IBAction Methods
@@ -103,6 +91,7 @@
 }
 
 -(void)doneButton{
+    self.chosenDate = self.selectDateView.chosenDate;
     NSString *finalDateString = [self.dateFormatter stringFromDate:self.chosenDate];
     self.dateLabel.text = finalDateString;
     [self removeSubViews];

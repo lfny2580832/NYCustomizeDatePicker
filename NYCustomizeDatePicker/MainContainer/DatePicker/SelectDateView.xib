@@ -21,6 +21,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="取消">
+                        <color key="titleColor" red="0.98431372549019602" green="0.28627450980392155" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -28,10 +29,11 @@
                     <rect key="frame" x="271" y="8" width="34" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="完成">
+                        <color key="titleColor" red="0.98431372549999996" green="0.28627450980000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeD-cb-R2A">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeD-cb-R2A">
                     <rect key="frame" x="0.0" y="46" width="320" height="204"/>
                     <color key="backgroundColor" red="0.87143026749999997" green="0.87022936259999994" blue="0.89120617940000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -39,14 +41,10 @@
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="baseline" secondItem="ZDB-zU-8cb" secondAttribute="firstBaseline" id="6db-N4-dF1"/>
-                <constraint firstItem="IeD-cb-R2A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AMh-U7-aST"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="top" secondItem="ZDB-zU-8cb" secondAttribute="top" id="BUw-Eq-LCY"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="firstBaseline" secondItem="ZDB-zU-8cb" secondAttribute="baseline" id="L1R-JP-XX5"/>
-                <constraint firstAttribute="trailing" secondItem="IeD-cb-R2A" secondAttribute="trailing" id="OUj-dG-5DZ"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="X6l-TH-fc8"/>
-                <constraint firstItem="IeD-cb-R2A" firstAttribute="top" secondItem="to3-6m-BAc" secondAttribute="bottom" constant="8" symbolic="YES" id="ZIR-8A-rgk"/>
                 <constraint firstAttribute="trailing" secondItem="ZDB-zU-8cb" secondAttribute="trailing" constant="15" id="aiV-Wr-Clz"/>
-                <constraint firstAttribute="bottom" secondItem="IeD-cb-R2A" secondAttribute="bottom" id="bWi-P9-i0l"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="e4G-29-FrB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

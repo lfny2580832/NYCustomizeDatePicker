@@ -7,6 +7,8 @@
 //
 
 #import "YearPickerView.h"
+#define kMainProjColor      [UIColor colorWithRed:251.f/255 green:73.f/255 blue:14.f/255 alpha:1.0f]
+
 @interface YearPickerView ()
 @property(strong,nonatomic)NSCalendar *calendar;
 @property(strong,nonatomic)NSDate *selectDate;
@@ -69,12 +71,13 @@
            reusingView:(UIView *)view{
     UILabel *dateLabel = (UILabel *)view;
     dateLabel = [[UILabel alloc] init];
+    [dateLabel setTextColor:kMainProjColor];
     [dateLabel setBackgroundColor:[UIColor clearColor]];
     NSDateComponents *components = [self.calendar components:NSCalendarUnitYear
                                                     fromDate:self.startDate];
     NSString *currentYear = [NSString stringWithFormat:@"%ld年", [components year] + row];
     [dateLabel setText:currentYear];
-    dateLabel.textAlignment = NSTextAlignmentLeft;
+    dateLabel.textAlignment = NSTextAlignmentCenter;
     return dateLabel;
 }
 

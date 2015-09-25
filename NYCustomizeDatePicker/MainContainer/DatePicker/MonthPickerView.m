@@ -7,6 +7,7 @@
 //
 
 #import "MonthPickerView.h"
+#define kMainProjColor      [UIColor colorWithRed:251.f/255 green:73.f/255 blue:14.f/255 alpha:1.0f]
 
 @interface MonthPickerView ()
 @property(strong,nonatomic)NSCalendar *calendar;
@@ -52,6 +53,7 @@
            reusingView:(UIView *)view{
     UILabel *dateLabel = (UILabel *)view;
     dateLabel = [[UILabel alloc] init];
+    [dateLabel setTextColor:kMainProjColor];
     [dateLabel setBackgroundColor:[UIColor clearColor]];
     NSString *currentMonth = [NSString stringWithFormat:@"%ld月", 1 + row];
     [dateLabel setText:currentMonth];

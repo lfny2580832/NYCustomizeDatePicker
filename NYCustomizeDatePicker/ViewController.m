@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MainViewController.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,8 @@
 }
 
 - (IBAction)showButtonClicked:(id)sender {
+    MainViewController *vc = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

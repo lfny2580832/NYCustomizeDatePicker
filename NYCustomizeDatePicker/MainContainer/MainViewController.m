@@ -78,6 +78,11 @@
 
 #pragma mark - IBAction Methods
 - (IBAction)showCustomeDatePicker:(id)sender {
+    [self.background setBackgroundColor:[UIColor clearColor]];
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         [self.background setBackgroundColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.5]];
+                     }];
     [self loadSelectDateView];
     [self.view addSubview:self.background];
     [self.view addSubview:self.selectDateView];
@@ -100,6 +105,12 @@
 -(void)removeSubViews{
     [UIView animateWithDuration:0.2
                      animations:^{
+                         [self.background setBackgroundColor:[UIColor clearColor]];
+                     }completion:^(BOOL finished){
+                         [self.background removeFromSuperview];
+                     }];
+    [UIView animateWithDuration:0.2
+                     animations:^{
                              [self.selectDateView setFrame:CGRectMake(0, ScreenHeight, self.dvWidth, self.dvHeight)];
                      }
                      completion:^(BOOL finished){
@@ -108,7 +119,6 @@
                                  self.selectDateView = nil;
                          }
                      }];
-    [self.background removeFromSuperview];
 }
 
 @end

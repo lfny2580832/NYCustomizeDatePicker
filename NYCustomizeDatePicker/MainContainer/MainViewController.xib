@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
-                <outlet property="dateLabel" destination="STs-8w-yYl" id="jG4-gO-LEh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,39 +14,39 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STs-8w-yYl">
-                    <rect key="frame" x="22" y="100" width="277" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.7366697271" blue="0.76450379940000002" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQL-os-Th2">
+                    <rect key="frame" x="8" y="36" width="304" height="70"/>
+                    <color key="backgroundColor" red="1" green="0.7366697271" blue="0.2908195888736842" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="ujL-VI-InZ"/>
+                        <constraint firstAttribute="height" constant="70" id="F1t-B9-Wlx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cil-rn-CQV">
-                    <rect key="frame" x="22" y="100" width="277" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPC-JP-5sZ">
+                    <rect key="frame" x="8" y="36" width="304" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Je6-pI-mwu"/>
+                        <constraint firstAttribute="height" constant="70" id="aiE-Kq-3ei"/>
                     </constraints>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="showCustomeDatePicker:" destination="-1" eventType="touchUpInside" id="cGd-3P-fOg"/>
+                        <action selector="showDatePicker:" destination="-1" eventType="touchUpInside" id="j7w-fE-jy0"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="STs-8w-yYl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="4yy-GF-LiA"/>
-                <constraint firstAttribute="trailing" secondItem="cil-rn-CQV" secondAttribute="trailing" constant="21" id="C3L-Up-9pr"/>
-                <constraint firstItem="cil-rn-CQV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="bA6-1c-dkb"/>
-                <constraint firstItem="STs-8w-yYl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="fer-iN-IYb"/>
-                <constraint firstAttribute="trailing" secondItem="STs-8w-yYl" secondAttribute="trailing" constant="21" id="n0j-Yp-eJl"/>
-                <constraint firstItem="cil-rn-CQV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="x0f-AZ-JQB"/>
+                <constraint firstAttribute="trailing" secondItem="rPC-JP-5sZ" secondAttribute="trailing" constant="8" id="RJW-9J-TaS"/>
+                <constraint firstItem="rPC-JP-5sZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="XQB-LF-hIS"/>
+                <constraint firstAttribute="trailing" secondItem="FQL-os-Th2" secondAttribute="trailing" constant="8" id="bB3-FR-AOQ"/>
+                <constraint firstItem="FQL-os-Th2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="fRW-n6-zN4"/>
+                <constraint firstItem="rPC-JP-5sZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="sHx-eM-PG0"/>
+                <constraint firstItem="FQL-os-Th2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="xzi-Xs-hxu"/>
             </constraints>
-            <point key="canvasLocation" x="340" y="405"/>
+            <point key="canvasLocation" x="170" y="629"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

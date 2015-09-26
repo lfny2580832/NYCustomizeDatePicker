@@ -14,8 +14,7 @@
 		4AACCC7D1BB44F6D0086C9A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC7C1BB44F6D0086C9A7 /* Images.xcassets */; };
 		4AACCC801BB44F6D0086C9A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC7E1BB44F6D0086C9A7 /* LaunchScreen.xib */; };
 		4AACCC8C1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC8B1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m */; };
-		4AACCC991BB450180086C9A7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC971BB450180086C9A7 /* MainViewController.m */; };
-		4AACCC9A1BB450180086C9A7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC981BB450180086C9A7 /* MainViewController.xib */; };
+		4AACCC991BB450180086C9A7 /* PickerControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC971BB450180086C9A7 /* PickerControllView.m */; };
 		4AACCCAA1BB454640086C9A7 /* DayPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCC9D1BB454640086C9A7 /* DayPickerView.m */; };
 		4AACCCAB1BB454640086C9A7 /* DayPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCC9E1BB454640086C9A7 /* DayPickerView.xib */; };
 		4AACCCAC1BB454640086C9A7 /* MonthPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCCA01BB454640086C9A7 /* MonthPickerView.m */; };
@@ -25,6 +24,9 @@
 		4AACCCB01BB454640086C9A7 /* SelectDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCCA61BB454640086C9A7 /* SelectDateView.xib */; };
 		4AACCCB11BB454640086C9A7 /* YearPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AACCCA81BB454640086C9A7 /* YearPickerView.m */; };
 		4AACCCB21BB454640086C9A7 /* YearPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AACCCA91BB454640086C9A7 /* YearPickerView.xib */; };
+		4AE5A7531BB6BE9500E73465 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5A7511BB6BE9500E73465 /* MainViewController.m */; };
+		4AE5A7541BB6BE9500E73465 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE5A7521BB6BE9500E73465 /* MainViewController.xib */; };
+		4AE5A7561BB6CE6000E73465 /* PickerControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE5A7551BB6CE6000E73465 /* PickerControllView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +53,8 @@
 		4AACCC851BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCustomizeDatePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AACCC8A1BB44F6D0086C9A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AACCC8B1BB44F6D0086C9A7 /* NYCustomizeDatePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCustomizeDatePickerTests.m; sourceTree = "<group>"; };
-		4AACCC961BB450180086C9A7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		4AACCC971BB450180086C9A7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4AACCC981BB450180086C9A7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4AACCC961BB450180086C9A7 /* PickerControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerControllView.h; path = ../PickerControllView.h; sourceTree = "<group>"; };
+		4AACCC971BB450180086C9A7 /* PickerControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerControllView.m; path = ../PickerControllView.m; sourceTree = "<group>"; };
 		4AACCC9C1BB454640086C9A7 /* DayPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayPickerView.h; sourceTree = "<group>"; };
 		4AACCC9D1BB454640086C9A7 /* DayPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayPickerView.m; sourceTree = "<group>"; };
 		4AACCC9E1BB454640086C9A7 /* DayPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayPickerView.xib; sourceTree = "<group>"; };
@@ -68,6 +69,10 @@
 		4AACCCA71BB454640086C9A7 /* YearPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearPickerView.h; sourceTree = "<group>"; };
 		4AACCCA81BB454640086C9A7 /* YearPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearPickerView.m; sourceTree = "<group>"; };
 		4AACCCA91BB454640086C9A7 /* YearPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YearPickerView.xib; sourceTree = "<group>"; };
+		4AE5A7501BB6BE9500E73465 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4AE5A7511BB6BE9500E73465 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4AE5A7521BB6BE9500E73465 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4AE5A7551BB6CE6000E73465 /* PickerControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerControllView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +156,9 @@
 		4AACCC951BB44FFB0086C9A7 /* MainContainer */ = {
 			isa = PBXGroup;
 			children = (
-				4AACCC961BB450180086C9A7 /* MainViewController.h */,
-				4AACCC971BB450180086C9A7 /* MainViewController.m */,
-				4AACCC981BB450180086C9A7 /* MainViewController.xib */,
+				4AE5A7501BB6BE9500E73465 /* MainViewController.h */,
+				4AE5A7511BB6BE9500E73465 /* MainViewController.m */,
+				4AE5A7521BB6BE9500E73465 /* MainViewController.xib */,
 				4AACCC9B1BB454640086C9A7 /* DatePicker */,
 			);
 			path = MainContainer;
@@ -162,6 +167,9 @@
 		4AACCC9B1BB454640086C9A7 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				4AACCC961BB450180086C9A7 /* PickerControllView.h */,
+				4AACCC971BB450180086C9A7 /* PickerControllView.m */,
+				4AE5A7551BB6CE6000E73465 /* PickerControllView.xib */,
 				4AACCCA41BB454640086C9A7 /* SelectDateView.h */,
 				4AACCCA51BB454640086C9A7 /* SelectDateView.m */,
 				4AACCCA61BB454640086C9A7 /* SelectDateView.xib */,
@@ -260,14 +268,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE5A7561BB6CE6000E73465 /* PickerControllView.xib in Resources */,
 				4AACCCB01BB454640086C9A7 /* SelectDateView.xib in Resources */,
 				4AACCC7B1BB44F6D0086C9A7 /* Main.storyboard in Resources */,
 				4AACCCAD1BB454640086C9A7 /* MonthPickerView.xib in Resources */,
 				4AACCCAB1BB454640086C9A7 /* DayPickerView.xib in Resources */,
+				4AE5A7541BB6BE9500E73465 /* MainViewController.xib in Resources */,
 				4AACCC801BB44F6D0086C9A7 /* LaunchScreen.xib in Resources */,
 				4AACCCB21BB454640086C9A7 /* YearPickerView.xib in Resources */,
 				4AACCC7D1BB44F6D0086C9A7 /* Images.xcassets in Resources */,
-				4AACCC9A1BB450180086C9A7 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +297,12 @@
 				4AACCCB11BB454640086C9A7 /* YearPickerView.m in Sources */,
 				4AACCC781BB44F6D0086C9A7 /* ViewController.m in Sources */,
 				4AACCCAC1BB454640086C9A7 /* MonthPickerView.m in Sources */,
+				4AE5A7531BB6BE9500E73465 /* MainViewController.m in Sources */,
 				4AACCCAE1BB454640086C9A7 /* PickerSubView.m in Sources */,
 				4AACCC751BB44F6D0086C9A7 /* AppDelegate.m in Sources */,
 				4AACCCAF1BB454640086C9A7 /* SelectDateView.m in Sources */,
 				4AACCC721BB44F6D0086C9A7 /* main.m in Sources */,
-				4AACCC991BB450180086C9A7 /* MainViewController.m in Sources */,
+				4AACCC991BB450180086C9A7 /* PickerControllView.m in Sources */,
 				4AACCCAA1BB454640086C9A7 /* DayPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

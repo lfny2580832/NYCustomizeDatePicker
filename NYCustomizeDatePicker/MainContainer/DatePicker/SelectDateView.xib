@@ -13,6 +13,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdQ-3t-Dw9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="Thz-i1-b1b"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to3-6m-BAc">
                     <rect key="frame" x="15" y="8" width="40" height="30"/>
                     <constraints>
@@ -42,10 +49,13 @@
             <constraints>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="baseline" secondItem="ZDB-zU-8cb" secondAttribute="firstBaseline" id="6db-N4-dF1"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="top" secondItem="ZDB-zU-8cb" secondAttribute="top" id="BUw-Eq-LCY"/>
+                <constraint firstItem="zdQ-3t-Dw9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gzn-I3-ZBr"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="firstBaseline" secondItem="ZDB-zU-8cb" secondAttribute="baseline" id="L1R-JP-XX5"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="X6l-TH-fc8"/>
                 <constraint firstAttribute="trailing" secondItem="ZDB-zU-8cb" secondAttribute="trailing" constant="15" id="aiV-Wr-Clz"/>
                 <constraint firstItem="to3-6m-BAc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="e4G-29-FrB"/>
+                <constraint firstItem="zdQ-3t-Dw9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f1M-ig-Ny6"/>
+                <constraint firstAttribute="trailing" secondItem="zdQ-3t-Dw9" secondAttribute="trailing" id="xki-t4-ijR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -53,7 +63,7 @@
                 <outlet property="doneButton" destination="ZDB-zU-8cb" id="C6I-m9-qku"/>
                 <outlet property="view" destination="IeD-cb-R2A" id="pVV-AA-fes"/>
             </connections>
-            <point key="canvasLocation" x="340" y="174"/>
+            <point key="canvasLocation" x="121" y="188"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

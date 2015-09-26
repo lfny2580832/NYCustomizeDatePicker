@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="dateLabel" destination="FQL-os-Th2" id="xbe-dr-lPR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQL-os-Th2">
-                    <rect key="frame" x="8" y="36" width="304" height="70"/>
+                    <rect key="frame" x="8" y="100" width="304" height="70"/>
                     <color key="backgroundColor" red="1" green="0.7366697271" blue="0.2908195888736842" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="F1t-B9-Wlx"/>
@@ -25,7 +26,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPC-JP-5sZ">
-                    <rect key="frame" x="8" y="36" width="304" height="70"/>
+                    <rect key="frame" x="8" y="100" width="304" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="aiE-Kq-3ei"/>
                     </constraints>
@@ -43,8 +44,8 @@
                 <constraint firstItem="rPC-JP-5sZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="XQB-LF-hIS"/>
                 <constraint firstAttribute="trailing" secondItem="FQL-os-Th2" secondAttribute="trailing" constant="8" id="bB3-FR-AOQ"/>
                 <constraint firstItem="FQL-os-Th2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="fRW-n6-zN4"/>
-                <constraint firstItem="rPC-JP-5sZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="sHx-eM-PG0"/>
-                <constraint firstItem="FQL-os-Th2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="xzi-Xs-hxu"/>
+                <constraint firstItem="rPC-JP-5sZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="sHx-eM-PG0"/>
+                <constraint firstItem="FQL-os-Th2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="xzi-Xs-hxu"/>
             </constraints>
             <point key="canvasLocation" x="170" y="629"/>
         </view>

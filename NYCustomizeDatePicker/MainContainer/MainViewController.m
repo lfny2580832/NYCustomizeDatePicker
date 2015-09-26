@@ -10,6 +10,7 @@
 #import "PickerControllView.h"
 
 @interface MainViewController ()<DatePickerDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) PickerControllView *pickerVC;
 @end
 
@@ -30,4 +31,7 @@
     [self.pickerVC removeFromSuperview];
 }
 
+-(void)datePickerReturn:(NSString *)dateString{
+    self.dateLabel.text = dateString;
+}
 @end

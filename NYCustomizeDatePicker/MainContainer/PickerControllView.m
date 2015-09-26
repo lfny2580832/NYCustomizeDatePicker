@@ -10,7 +10,7 @@
 #import "SelectDateView.h"
 
 #define ScreenWidth         [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight         [UIScreen mainScreen].bounds.size.height
+#define ScreenHeight        [UIScreen mainScreen].bounds.size.height
 
 @interface PickerControllView ()
 @property(strong,nonatomic)SelectDateView *selectDateView;
@@ -41,14 +41,7 @@
     self.selectDateView = [[[NSBundle mainBundle]loadNibNamed:@"SelectDateView" owner:self options:nil]lastObject];
     [self.selectDateView loadWithChooseDate:self.chosenDate];
     self.dvHeight = self.selectDateView.frame.size.height;
-    
-    CGRect frame = self.selectDateView.frame;
-    
-    frame.origin.x = 0.f;
-    frame.origin.y = ScreenHeight ;
-    frame.size.width = self.dvWidth;
-    frame.size.width = self.dvHeight;
-    [self.selectDateView setFrame:frame];
+    [self.selectDateView setFrame:CGRectMake(0, ScreenHeight, self.dvWidth, self.dvHeight)];
     [self.selectDateView.cancelButton addTarget:self
                                          action:@selector(cancelButton)
                                         forControlEvents:UIControlEventTouchUpInside];
@@ -62,30 +55,29 @@
     [self.dateFormatter setDateFormat:@"yyyy-MM-dd"];
     self.chosenDate = [NSDate date];
     NSString *chosenDateString = [self.dateFormatter stringFromDate:self.chosenDate];
+    [self.pickerDelegate datePickerReturn:chosenDateString];
 }
 
 #pragma mark - UIView Methods
 -(void)awakeFromNib{
     [super awakeFromNib];
     [self setFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-    [self setBackgroundColor:[UIColor clearColor]];
     [self loadDate];
     [self showCustomeDatePicker];
 }
 
 #pragma mark - IBAction Methods
 - (void)showCustomeDatePicker {
+
+    [self loadSelectDateView];
+    [self addSubview:self.background];
+    [self addSubview:self.selectDateView];
     [self.background setBackgroundColor:[UIColor clearColor]];
     [UIView animateWithDuration:0.2
                      animations:^{
                          [self.background setBackgroundColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.5]];
+                         [self.selectDateView setFrame:CGRectMake(0, ScreenHeight - self.dvHeight, self.dvWidth, self.dvHeight)];
                      }];
-    [self loadSelectDateView];
-    [self addSubview:self.background];
-    [self addSubview:self.selectDateView];
-    [UIView animateWithDuration:0.2 animations:^{
-        [self.selectDateView setFrame:CGRectMake(0, ScreenHeight - self.dvHeight, self.dvWidth, self.dvHeight)];
-    }];
 }
 
 -(void)cancelButton{
@@ -95,6 +87,7 @@
 -(void)doneButton{
     self.chosenDate = self.selectDateView.chosenDate;
     NSString *finalDateString = [self.dateFormatter stringFromDate:self.chosenDate];
+    [self.pickerDelegate datePickerReturn:finalDateString];
     [self removeSubViews];
 }
 
@@ -102,19 +95,12 @@
     [UIView animateWithDuration:0.2
                      animations:^{
                          [self.background setBackgroundColor:[UIColor clearColor]];
+                         [self.selectDateView setFrame:CGRectMake(0, ScreenHeight, self.dvWidth, self.dvHeight)];
                      }completion:^(BOOL finished){
                          [self.background removeFromSuperview];
-                     }];
-    [UIView animateWithDuration:0.2
-                     animations:^{
-                         [self.selectDateView setFrame:CGRectMake(0, ScreenHeight, self.dvWidth, self.dvHeight)];
-                     }
-                     completion:^(BOOL finished){
-                         if (finished) {
-                             [self.selectDateView removeFromSuperview];
-                             self.selectDateView = nil;
-                             [self.pickerDelegate datePickerRemove];
-                         }
+                         [self.selectDateView removeFromSuperview];
+                         self.selectDateView = nil;
+                         [self.pickerDelegate datePickerRemove];
                      }];
 }
 

@@ -18,5 +18,6 @@
 @protocol DatePickerDelegate <NSObject>
 
 -(void)datePickerRemove;
+-(void)datePickerReturn:(NSString *)dateString;
 
 @end
